@@ -1,0 +1,121 @@
+<html><head><meta charset="utf-8"><style>body { font-family: Arial; }ul { list-style-position: inside; }li img { max-width: 100%; }span.passed { padding: 0 1em; color: green; }span.failed { padding: 0 1em; color: red; }span.pending { padding: 0 1em; color: orange; }span.stacktrace { white-space: pre; border: 1px solid rgb(0, 0, 0); font-size: 9pt; padding: 4px; background-color: rgb(204, 204, 204); }</style><script type="text/javascript">function showhide(id) {var e = document.getElementById(id);e.style.display = (e.style.display === "block") ? "none" : "block";}function buildQuickLinks() {var failedSpecs = document.querySelectorAll("li.failed");var quickLinksContainer = document.getElementById("quickLinks");if (!quickLinksContainer) return;if (failedSpecs.length > 0) { document.getElementById("quickLinksHeader").textContent = "Quicklink of Failure"}for (var i = 0; i < failedSpecs.length; ++i) {var li = document.createElement("li");var a = document.createElement("a");a.href = "#" + failedSpecs[i].id;a.textContent = failedSpecs[i].dataset.name + "  (" + failedSpecs[i].dataset.browser + ")";li.appendChild(a);quickLinksContainer.appendChild(li);}}function updatePassCount() {var totalPassed = document.querySelectorAll("li.passed").length;var totalFailed = document.querySelectorAll("li.failed").length;var totalSpecs = totalFailed + totalPassed;console.log("passed: %s, failed: %s, total: %s", totalPassed, totalFailed, totalSpecs);document.getElementById("summaryTotalSpecs").textContent = document.getElementById("summaryTotalSpecs").textContent + totalSpecs;document.getElementById("summaryTotalFailed").textContent = document.getElementById("summaryTotalFailed").textContent + totalFailed;if (totalFailed) {document.getElementById("summary").className = "failed";}}function start() {updatePassCount();buildQuickLinks();}window.onload = start;</script></head><body><h1>Report</h1><div id="summary" class="passed"><h4>Summary</h4><ul><li id="summaryTotalSpecs">Total specs tested: </li><li id="summaryTotalFailed">Total failed: </li></ul></div><ul style="list-style-type:none"><h4>App (12 s)</h4><li id="35a05a10-5e86-11e8-8854-ed18c4a03e0d" class="passed" data-spec="spec0" data-name="toggles the form" data-browser="chrome"><span class="passed">&#10003;</span><a href="a91ab0a7596637914b296aba4237dd31.png">toggles the form</a>(1 s)</li><li id="35a08120-5e86-11e8-8854-ed18c4a03e0d" class="passed" data-spec="spec1" data-name="disables the button until the form is valid" data-browser="chrome"><span class="passed">&#10003;</span><a href="1d6c43822f3a53ea3e85d60f5f7db27c.png">disables the button until the form is valid</a>(2 s)</li><li id="35a0a830-5e86-11e8-8854-ed18c4a03e0d" class="passed" data-spec="spec2" data-name="changes the validation class names on blur" data-browser="chrome"><span class="passed">&#10003;</span><a href="847fef0100c2acb68156ec08e6c05b57.png">changes the validation class names on blur</a>(1 s)</li><li id="35a0a831-5e86-11e8-8854-ed18c4a03e0d" class="passed" data-spec="spec3" data-name="creates a post" data-browser="chrome"><span class="passed">&#10003;</span><a href="9e8190aeafc939973160e95a955b9718.png">creates a post</a>(2 s)</li><li id="35a0a832-5e86-11e8-8854-ed18c4a03e0d" class="passed" data-spec="spec4" data-name="allows users to add comments" data-browser="chrome"><span class="passed">&#10003;</span><a href="b425ea8454cab30f2c9e923b344640db.png">allows users to add comments</a>(2 s)</li><li id="35a0a833-5e86-11e8-8854-ed18c4a03e0d" class="failed" data-spec="spec5" data-name="clicking on comments only expands a single comments field (not all of them)" data-browser="chrome"><span class="failed">&#10007;</span><a href="fe9795f757a7ea401cdd509a52980828.png">clicking on comments only expands a single comments field (not all of them)</a>(2 s)<ul><li>Failed: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;) [<a href="javascript:showhide('spec5-MacOSX-chrome-66.0.3359.1810')">stack</a>]<br/><span style="display: none" id="spec5-MacOSX-chrome-66.0.3359.1810" class="stacktrace">NoSuchElementError: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;)
+    at elementArrayFinder.getWebElements.then (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:814:27)
+    at ManagedPromise.invokeCallback_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at asyncRun (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2927:27)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:91:29)
+    at ElementFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:831:22)
+    at PostForm.fillIn (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:164:23)
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:55:8)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:112:25
+    at new ManagedPromise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1077:7)
+    at ControlFlow.promise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2505:12)
+    at schedulerExecute (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:95:18)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+From: Task: Run it(&quot;clicking on comments only expands a single comments field (not all of them)&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:64:48
+    at ControlFlow.emit (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/events.js:62:21)
+    at ControlFlow.shutdown_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2674:10)
+    at shutdownTask_.MicroTask (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2599:53)
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:47:3)
+    at addSpecsToSuite (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:1:63)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)</span></li></ul></li><li id="35a0a834-5e86-11e8-8854-ed18c4a03e0d" class="failed" data-spec="spec6" data-name="allows users to filter" data-browser="chrome"><span class="failed">&#10007;</span><a href="27cf8546ddee6cd49caf78bc99922cd0.png">allows users to filter</a>(2 s)<ul><li>Failed: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;) [<a href="javascript:showhide('spec6-MacOSX-chrome-66.0.3359.1810')">stack</a>]<br/><span style="display: none" id="spec6-MacOSX-chrome-66.0.3359.1810" class="stacktrace">NoSuchElementError: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;)
+    at elementArrayFinder.getWebElements.then (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:814:27)
+    at ManagedPromise.invokeCallback_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at asyncRun (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2927:27)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:91:29)
+    at ElementFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:831:22)
+    at PostForm.fillIn (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:164:23)
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:77:8)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:112:25
+    at new ManagedPromise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1077:7)
+    at ControlFlow.promise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2505:12)
+    at schedulerExecute (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:95:18)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+From: Task: Run it(&quot;allows users to filter&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:64:48
+    at ControlFlow.emit (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/events.js:62:21)
+    at ControlFlow.shutdown_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2674:10)
+    at shutdownTask_.MicroTask (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2599:53)
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:69:3)
+    at addSpecsToSuite (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:1:63)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)</span></li></ul></li><li id="35a0cf40-5e86-11e8-8854-ed18c4a03e0d" class="failed" data-spec="spec7" data-name="allows users to sort" data-browser="chrome"><span class="failed">&#10007;</span><a href="5962d91a358ca9ac20ceef1aaf8656d8.png">allows users to sort</a>(2 s)<ul><li>Failed: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;) [<a href="javascript:showhide('spec7-MacOSX-chrome-66.0.3359.1810')">stack</a>]<br/><span style="display: none" id="spec7-MacOSX-chrome-66.0.3359.1810" class="stacktrace">NoSuchElementError: No element found using locator: by.cssContainingText(&quot;form div,form p&quot;, &quot;Title&quot;)
+    at elementArrayFinder.getWebElements.then (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:814:27)
+    at ManagedPromise.invokeCallback_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at asyncRun (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2927:27)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:91:29)
+    at ElementFinder.(anonymous function).args [as sendKeys] (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/protractor/built/element.js:831:22)
+    at PostForm.fillIn (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:164:23)
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:98:8)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:112:25
+    at new ManagedPromise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:1077:7)
+    at ControlFlow.promise (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2505:12)
+    at schedulerExecute (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:95:18)
+    at TaskQueue.execute_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+From: Task: Run it(&quot;allows users to sort&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
+    at /Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasminewd2/index.js:64:48
+    at ControlFlow.emit (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/events.js:62:21)
+    at ControlFlow.shutdown_ (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2674:10)
+    at shutdownTask_.MicroTask (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/selenium-webdriver/lib/promise.js:2599:53)
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:90:3)
+    at addSpecsToSuite (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (/Users/keolazy/Desktop/q3/angular-drills/reddit-clone-part-1/test/app.test.js:1:63)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)</span></li></ul></li></ul><a href="javascript:showhide('35a0cf41-5e86-11e8-8854-ed18c4a03e0d')">Toggle Configuration</a><div class="config" id="35a0cf41-5e86-11e8-8854-ed18c4a03e0d" style="display: none"><h4>Configuration</h4><li>Jasmine version:  2.8.0</li><li>Browser name:  chrome</li><li>Browser version:  66.0.3359.181</li><li>Platform:  Mac OS X</li><li>Javascript enabled:  true</li><li>Css selectors enabled:  true</li></div></body></html>
