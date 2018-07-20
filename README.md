@@ -1,20 +1,15 @@
 # Reddit Clone
 
-Create an Angular application that's a Reddit clone.
+Created an Angular application that's a Reddit clone.
+Had some fun with the seed data.
 
 ## Setup
 
 Run `yarn` and `npm start` to see the app locally.
 
-Run `npm test` to run the tests.
-
-> Check the "test/screenshots" folder for examples of what each test is looking for.
-
 ## Preview
 
 ![Preview](./images/reddit.png)
-
-https://www.pexels.com/search/hipster/
 
 ## HTML Snippets
 
